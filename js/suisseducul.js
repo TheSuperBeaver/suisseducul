@@ -1,12 +1,14 @@
 var personnes = []
 var objets = []
 var lieux = []
+var quand = []
 
 function loadData() {
 	
 	var urlPersonnes = "https://spreadsheets.google.com/feeds/list/1-Z1JsVYIIudA6aWKqfz1GYhwSrRfvTnGmCj1H3wgdOs/1/public/values?alt=json";
 	var urlLieux = "https://spreadsheets.google.com/feeds/list/1-Z1JsVYIIudA6aWKqfz1GYhwSrRfvTnGmCj1H3wgdOs/2/public/values?alt=json";
 	var urlObjets = "https://spreadsheets.google.com/feeds/list/1-Z1JsVYIIudA6aWKqfz1GYhwSrRfvTnGmCj1H3wgdOs/3/public/values?alt=json";
+	var urlQuand = "https://spreadsheets.google.com/feeds/list/1-Z1JsVYIIudA6aWKqfz1GYhwSrRfvTnGmCj1H3wgdOs/4/public/values?alt=json";
                       
 	$.getJSON(urlPersonnes, function(data) {						  
         var sheetData = data.feed.entry;
@@ -32,6 +34,14 @@ function loadData() {
 		  objets.push(objet);
         }
       });
+	$.getJSON(urlQuand, function(data) {						  
+        var sheetData = data.feed.entry;
+		var i;
+        for (i = 0; i < sheetData.length; i++) {
+          var nom = data.feed.entry[i]['gsx$quand']['$t'];		  
+		  quand.push(nom);
+        }
+      });
 }
 	  
 function getPersonne(elementId) {
@@ -50,4 +60,10 @@ function getLieu() {
 	$("#lieu").removeClass('d-none');
 	var random = lieux[Math.floor(Math.random() * lieux.length)];
 	document.getElementById("lieu").innerHTML=random;
+}
+
+function getQuand() {
+	$("#quand").removeClass('d-none');
+	var random = quand[Math.floor(Math.random() * quand.length)];
+	document.getElementById("quand").innerHTML=random;
 }
