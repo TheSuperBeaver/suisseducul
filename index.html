@@ -16,35 +16,35 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
 
-  <body>
-    <div class="container text-center my-4">
-
+  <body onload="loadData();">
+    <div class="container text-center">
 	  <img src="img/logo.png" class="img-fluid" />
- 
-      <!-- Table  -->
-      <table class="table table bordered table-striped" id="testTable">
-        <input type="button" id="btnSearch" class="btn btn-danger" value="Nom aléatoire" onclick="getPersonne();" />
-		<div id="personne" class="alert alert-info" role="alert">
+	  <div class="row">
+	    <div class="col">
+			<input type="button" id="btnSearch" class="btn btn-danger" value="Nom aléatoire" onclick="getPersonne();" />
 		</div>
-		<br />
-		<input type="button" id="btnSearchObjet" class="btn btn-danger" value="Objet aléatoire" onclick="getObjet();" />
-		<div id="objet" class="alert alert-info" role="alert">
+		<div class="col">
+			<div id="personne" class="alert alert-info d-none" role="alert"></div>
 		</div>
-		<br />
-		<input type="button" id="btnSearchLieu" class="btn btn-danger" value="Lieu aléatoire" onclick="getLieu();" />
-		<div id="lieu" class="alert alert-info" role="alert" />
+	  </div>
+	  
+	  <div class="row">
+	    <div class="col">
+			<input type="button" id="btnSearchObjet" class="btn btn-danger" value="Objet aléatoire" onclick="getObjet();" />
 		</div>
-		
-      </table>
-      <!-- Table  -->
-
+		<div class="col">
+			<div id="objet" class="alert alert-info d-none" role="alert"></div>
+		</div>
+	  </div>
+	  <div class="row">
+	    <div class="col">
+			<input type="button" id="btnSearchLieu" class="btn btn-danger" value="Lieu aléatoire" onclick="getLieu();" />
+		</div>
+		<div class="col">
+			<div id="lieu" class="alert alert-info d-none" role="alert"></div>
+		</div>
+	  </div>
     </div>
-
-    <!-- Start your project here-->
-
-    <!-- /Start your project here-->
-
-    <!-- SCRIPTS -->
     <!-- JQuery -->
     <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
     <!-- Bootstrap tooltips -->
@@ -53,62 +53,8 @@
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="js/mdb.min.js"></script>
-
-
-
-    <script type="text/javascript">
-	var spreadsheetID = "1-Z1JsVYIIudA6aWKqfz1GYhwSrRfvTnGmCj1H3wgdOs"
-	var urlPersonnes = "https://spreadsheets.google.com/feeds/list/1-Z1JsVYIIudA6aWKqfz1GYhwSrRfvTnGmCj1H3wgdOs/1/public/values?alt=json";
-	var urlLieux = "https://spreadsheets.google.com/feeds/list/1-Z1JsVYIIudA6aWKqfz1GYhwSrRfvTnGmCj1H3wgdOs/2/public/values?alt=json";
-	var urlObjets = "https://spreadsheets.google.com/feeds/list/1-Z1JsVYIIudA6aWKqfz1GYhwSrRfvTnGmCj1H3wgdOs/3/public/values?alt=json";
 	
-	var personnes = []
-	var objets = []
-	var lieux = []
-                      
-	$.getJSON(urlPersonnes, function(data) {						  
-        var sheetData = data.feed.entry;
-        var i;
-        for (i = 0; i < sheetData.length; i++) {
-          var name = data.feed.entry[i]['gsx$personne']['$t'];		  
-		  personnes.push(name);
-        }
-      });
-	$.getJSON(urlLieux, function(data) {						  
-        var sheetData = data.feed.entry;
-        var i;
-        for (i = 0; i < sheetData.length; i++) {
-          var lieu = data.feed.entry[i]['gsx$lieux']['$t'];		  
-		  lieux.push(lieu);
-        }
-      });
-	$.getJSON(urlObjets, function(data) {						  
-        var sheetData = data.feed.entry;
-        var i;
-        for (i = 0; i < sheetData.length; i++) {
-          var objet = data.feed.entry[i]['gsx$objet']['$t'];		  
-		  objets.push(objet);
-        }
-      });
-	  
-	function getPersonne()
-	{
-		var random = personnes[Math.floor(Math.random() * personnes.length)];
-		document.getElementById("personne").innerHTML=random;
-	}
-	
-	function getObjet()
-	{
-		var random = objets[Math.floor(Math.random() * objets.length)];
-		document.getElementById("objet").innerHTML=random;
-	}
-	
-	function getLieu()
-	{
-		var random = lieux[Math.floor(Math.random() * lieux.length)];
-		document.getElementById("lieu").innerHTML=random;
-	}
-    </script>
+	<script type="text/javascript" src="js/suisseducul.js"></script>
   </body>
 
 </html>
