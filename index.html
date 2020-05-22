@@ -21,27 +21,35 @@
 	  <img src="img/logo.png" class="img-fluid" />
 	  <div class="row">
 	    <div class="col">
-			<input type="button" id="btnSearch" class="btn btn-danger" value="Nom aléatoire" onclick="getPersonne();" />
+			<input type="button" id="btnSearch" class="btn btn-danger" value="Qui ?" onclick="getPersonne('personne');" />
 		</div>
 		<div class="col">
-			<div id="personne" class="alert alert-info d-none" role="alert"></div>
+			<div id="personne" class="alert alert-danger font-weight-bold d-none" role="alert"></div>
 		</div>
 	  </div>
 	  
 	  <div class="row">
 	    <div class="col">
-			<input type="button" id="btnSearchObjet" class="btn btn-danger" value="Objet aléatoire" onclick="getObjet();" />
+			<input type="button" id="btnSearchObjet" class="btn btn-danger" value="Objet" onclick="getObjet();" />
 		</div>
 		<div class="col">
-			<div id="objet" class="alert alert-info d-none" role="alert"></div>
+			<div id="objet" class="alert alert-danger font-weight-bold d-none" role="alert"></div>
 		</div>
 	  </div>
 	  <div class="row">
 	    <div class="col">
-			<input type="button" id="btnSearchLieu" class="btn btn-danger" value="Lieu aléatoire" onclick="getLieu();" />
+			<input type="button" id="btnSearchLieu" class="btn btn-danger" value="Lieu" onclick="getLieu();" />
 		</div>
 		<div class="col">
-			<div id="lieu" class="alert alert-info d-none" role="alert"></div>
+			<div id="lieu" class="alert alert-danger font-weight-bold d-none" role="alert"></div>
+		</div>
+	  </div>
+	  <div class="row">
+	    <div class="col">
+			<input type="button" id="btnSearchAppartient" class="btn btn-danger" value="De qui ?" onclick="getPersonne('appartient');" />
+		</div>
+		<div class="col">
+			<div id="appartient" class="alert alert-danger font-weight-bold d-none" role="alert"></div>
 		</div>
 	  </div>
     </div>

@@ -34,10 +34,10 @@ function loadData() {
       });
 }
 	  
-function getPersonne() {
-	$("#personne").removeClass('d-none');
+function getPersonne(elementId) {
+	$("#" + elementId).removeClass('d-none');
 	var random = personnes[Math.floor(Math.random() * personnes.length)];
-	document.getElementById("personne").innerHTML=random;
+	document.getElementById(elementId).innerHTML=random;
 }
 	
 function getObjet() {
