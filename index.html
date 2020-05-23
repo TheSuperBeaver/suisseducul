@@ -18,44 +18,49 @@
 
   <body onload="loadData();">
     <div class="container text-center">
-	  <img src="img/logo.png" class="img-fluid" />
 	  <div class="row">
-	    <div class="col">
-			<input type="button" id="btnSearch" class="btn btn-danger" value="Qui ?" onclick="getPersonne('personne');" />
+		<img src="img/logo.png" class="img-fluid" />
+	  </div>
+	  <div class="row">
+		
+	  </div>
+	  <div class="row">
+	    <div class="col-md-2">
+			<input type="button" id="btnSearch" class="btn btn-outline-danger" value="Qui ?" onclick="getPersonne('personne');" />
 		</div>
-		<div class="col">
+		<div class="col-md-10">
 			<div id="personne" class="alert alert-danger font-weight-bold d-none" role="alert"></div>
 		</div>
 	  </div>
 	  <div class="row">
-	    <div class="col">
-			<input type="button" id="btnSearchLieu" class="btn btn-danger" value="Où ?" onclick="getLieu();" />
+	    <div class="col-md-2">
+			<input type="button" id="btnSearchLieu" class="btn btn-outline-danger" value="Où ?" onclick="getLieu();" />
 		</div>
-		<div class="col">
+		<div class="col-md-10">
 			<div id="lieu" class="alert alert-danger font-weight-bold d-none" role="alert"></div>
 		</div>
 	  </div>
 	  <div class="row">
-	    <div class="col">
-			<input type="button" id="btnSearchObjet" class="btn btn-danger" value="Objet" onclick="getObjet();" />
+	    <div class="col-md-2">
+			<input type="button" id="btnSearchObjet" class="btn btn-outline-danger" value="Objet" onclick="getObjet();" />
 		</div>
-		<div class="col">
+		<div class="col-md-10">
 			<div id="objet" class="alert alert-danger font-weight-bold d-none" role="alert"></div>
 		</div>
 	  </div>
 	  <div class="row">
-	    <div class="col">
-			<input type="button" id="btnSearchAppartient" class="btn btn-danger" value="De qui ?" onclick="getPersonne('appartient');" />
+	    <div class="col-md-2">
+			<input type="button" id="btnSearchAppartient" class="btn btn-outline-danger" value="De qui ?" onclick="getPersonne('appartient');" />
 		</div>
-		<div class="col">
+		<div class="col-md-10">
 			<div id="appartient" class="alert alert-danger font-weight-bold d-none" role="alert"></div>
 		</div>
 	  </div>
 	  <div class="row">
-	    <div class="col">
-			<input type="button" id="btnSearchQuand" class="btn btn-danger" value="Quand ?" onclick="getQuand();" />
+	    <div class="col-md-2">
+			<input type="button" id="btnSearchQuand" class="btn btn-outline-danger" value="Quand ?" onclick="getQuand();" />
 		</div>
-		<div class="col">
+		<div class="col-md-10">
 			<div id="quand" class="alert alert-danger font-weight-bold d-none" role="alert"></div>
 		</div>
 	  </div>
