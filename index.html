@@ -22,8 +22,16 @@
 		<img src="img/logo.png" class="img-fluid" />
 	  </div>
 	  <div class="row">
-		
+		<div class="col-md-12">
+			<input type="button" id="btnSearch" class="btn btn-danger" value="Générer !" onclick="generePhrase();" />
+		</div>
 	  </div>
+	  <div class="row">
+		<div class="col-md-12">
+			<div id="phrase" class="alert alert-danger font-weight-bold d-none" role="alert"></div>
+		</div>
+	  </div>
+	  <!--
 	  <div class="row">
 	    <div class="col-md-2">
 			<input type="button" id="btnSearch" class="btn btn-outline-danger" value="Qui ?" onclick="getPersonne('personne');" />
@@ -63,7 +71,7 @@
 		<div class="col-md-10">
 			<div id="quand" class="alert alert-danger font-weight-bold d-none" role="alert"></div>
 		</div>
-	  </div>
+	  </div> -->
     </div>
     <!-- JQuery -->
     <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
