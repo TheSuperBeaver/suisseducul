@@ -2,10 +2,8 @@ var personnes = []
 var objets = []
 var lieux = []
 var quands = []
-var debuts = []
 var verbes = []
 
-var debut;
 var quand;
 var personne1;
 var personne2;
@@ -19,14 +17,12 @@ function loadData() {
 	var urlLieux = "https://spreadsheets.google.com/feeds/list/1-Z1JsVYIIudA6aWKqfz1GYhwSrRfvTnGmCj1H3wgdOs/2/public/values?alt=json";
 	var urlObjets = "https://spreadsheets.google.com/feeds/list/1-Z1JsVYIIudA6aWKqfz1GYhwSrRfvTnGmCj1H3wgdOs/3/public/values?alt=json";
 	var urlQuand = "https://spreadsheets.google.com/feeds/list/1-Z1JsVYIIudA6aWKqfz1GYhwSrRfvTnGmCj1H3wgdOs/4/public/values?alt=json";
-	var urlDebut = "https://spreadsheets.google.com/feeds/list/1-Z1JsVYIIudA6aWKqfz1GYhwSrRfvTnGmCj1H3wgdOs/5/public/values?alt=json";
-	var urlVerbe = "https://spreadsheets.google.com/feeds/list/1-Z1JsVYIIudA6aWKqfz1GYhwSrRfvTnGmCj1H3wgdOs/6/public/values?alt=json";
+	var urlVerbe = "https://spreadsheets.google.com/feeds/list/1-Z1JsVYIIudA6aWKqfz1GYhwSrRfvTnGmCj1H3wgdOs/5/public/values?alt=json";
     
 	getJson(urlPersonnes, personnes, 'gsx$personne');
 	getJson(urlLieux, lieux, 'gsx$lieux');
 	getJson(urlObjets, objets, 'gsx$objet');
 	getJson(urlQuand, quands, 'gsx$quand');
-	getJson(urlDebut, debuts, 'gsx$debut');
 	getJson(urlVerbe, verbes, 'gsx$verbe');
 }
 
@@ -39,10 +35,6 @@ function getJson(url, list, fieldName) {
 		list.push(value);
 	}
   });
-}
-
-function randomDebut() {
-	debut = debuts[Math.floor(Math.random() * debuts.length)];
 }
 function randomQuand() {
 	quand = quands[Math.floor(Math.random() * quands.length)];
@@ -66,7 +58,7 @@ function randomLieu() {
 	lieu = lieux[Math.floor(Math.random() * lieux.length)];
 }
 function replacePhrase() {
-	phrase = debut + " " + quand + " " + lieu + " " + personne1 + " et " + personne2 + " " + verbe + " " + objet + " de " + personne3;
+	phrase = quand + " " + lieu + " " + personne1 + " et " + personne2 + " " + verbe + " " + objet + " de " + personne3;
 	var textWrapper = document.querySelector('.ml11 .letters');
 	textWrapper.innerHTML = phrase;
 	
@@ -80,7 +72,6 @@ var showText = function (target, message, index, interval) {
 }
 
 function generePhrase() {
-	randomDebut();
 	randomQuand();
 	randomPersonne1();
 	randomPersonne2();
