@@ -24,6 +24,11 @@ getJson(urlQuand, quands, 'gsx$quand');
 getJson(urlVerbe, verbesPluriel, 'gsx$verbe');
 getJson(urlVerbe, verbesSingulier, 'gsx$singulier');
 
+$('.text-carousel').carousel({
+	interval: false,
+	pause: "hover"
+});
+
 function getJson(url, list, fieldName) {
   $.getJSON(url, function(data) {						  
     var sheetData = data.feed.entry;
