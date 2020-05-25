@@ -16,23 +16,80 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
 
-  <body onload="loadData();">
-	<div class="bg"></div>
-    <div class="container text-center">
-	  <div class="row">
-		<div class="col-md-12">
-			<input type="button" id="btnSearch" class="btn btn-danger" value="Générer !" onclick="generePhrase();" />
+  <body onload="loadData();">  
+	
+	<div class="author-quote-wrap">
+		<input class="toggle-quote" type="radio" id="AQ-1" name="quote" checked>
+		<div class="author-quote">
+			<div class="pull-left author-photo photo-a animated bounceInLeft">
+				<div class="navigate">
+					<label class="label left" for="AQ-5">&nbsp;</label>
+					<label class="label right" for="AQ-2">&nbsp;</label>
+				</div>
+			</div>
+			<div class="pull-right quote-content">
+				<div id="phrase1" class="quote-text animated rotateInDownRight">Chargement ..</div>
+				<div class="quote-author animated lightSpeedIn">Le soir du cul</div>
+			</div>
 		</div>
-	  </div>
-	  <div class="row">
-		<h1 class="ml11">
-		  <span class="text-wrapper">
-			<span class="line line1"></span>
-			<span class="letters"></span>
-		  </span>
-		</h1>
-	  </div>
-    </div>
+
+		<input class="toggle-quote" type="radio" id="AQ-2" name="quote">
+		<div class="author-quote">
+			<div class="pull-left author-photo photo-b animated bounceInLeft">
+				<div class="navigate">
+					<label class="label left" for="AQ-1">&nbsp;</label>
+					<label class="label right" for="AQ-3">&nbsp;</label>
+				</div>
+			</div>
+			<div class="pull-right quote-content">
+				<div id="phrase2" class="quote-text animated zoomInDown">Chargement ..</div>
+				<div class="quote-author animated lightSpeedIn">Le soir du cul</div>
+			</div>
+		</div>
+
+		<input class="toggle-quote" type="radio" id="AQ-3" name="quote">
+		<div class="author-quote">
+			<div class="pull-left author-photo photo-c animated bounceInLeft">
+				<div class="navigate">
+					<label class="label left" for="AQ-2">&nbsp;</label>
+					<label class="label right" for="AQ-4">&nbsp;</label>
+				</div>
+			</div>
+			<div class="pull-right quote-content">
+				<div id="phrase3" class="quote-text animated rotateInDownRight">Chargement ..</div>
+				<div class="quote-author animated lightSpeedIn">Le soir du cul</div>
+			</div>
+		</div>
+
+		<input class="toggle-quote" type="radio" id="AQ-4" name="quote">
+		<div class="author-quote">
+			<div class="pull-left author-photo photo-d animated bounceInLeft">
+				<div class="navigate">
+					<label class="label left" for="AQ-3">&nbsp;</label>
+					<label class="label right" for="AQ-5">&nbsp;</label>
+				</div>
+			</div>
+			<div class="pull-right quote-content">
+				<div id="phrase4" class="quote-text animated rotateInDownRight">Chargement ..</div>
+				<div class="quote-author animated lightSpeedIn">Le soir du cul</div>
+			</div>
+		</div>
+
+		<input class="toggle-quote" type="radio" id="AQ-5" name="quote">
+		<div class="author-quote">
+			<div class="pull-left author-photo photo-e animated bounceInLeft">
+				<div class="navigate">
+					<label class="label left" for="AQ-4">&nbsp;</label>
+					<label class="label right" for="AQ-1" onclick="newPhrases();">&nbsp;</label>
+				</div>
+			</div>
+			<div class="pull-right quote-content">
+				<div id="phrase5" class="quote-text animated rotateInDownRight">Chargement ..</div>
+				<div class="quote-author animated lightSpeedIn">Le soir du cul</div>
+			</div>
+		</div>
+	</div>
+
     <!-- JQuery -->
     <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
     <!-- Bootstrap tooltips -->
@@ -44,7 +101,7 @@
 	
 	<script type="text/javascript" src="js/suisseducul.js"></script>
 	
-	<script type="text/javascript" src="js/anime.js"></script>
+	<script type="text/javascript" src="js/lodash.js"></script>
   </body>
 
 </html>
