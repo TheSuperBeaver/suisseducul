@@ -17,61 +17,21 @@
   </head>
 
   <body onload="loadData();">
+	<div class="bg"></div>
     <div class="container text-center">
-	  <div class="row">
-		<img src="img/logo.png" class="img-fluid" />
-	  </div>
 	  <div class="row">
 		<div class="col-md-12">
 			<input type="button" id="btnSearch" class="btn btn-danger" value="Générer !" onclick="generePhrase();" />
 		</div>
 	  </div>
 	  <div class="row">
-		<div class="col-md-12">
-			<div id="phrase" class="alert alert-danger font-weight-bold d-none" role="alert"></div>
-		</div>
+		<h1 class="ml11">
+		  <span class="text-wrapper">
+			<span class="line line1"></span>
+			<span class="letters"></span>
+		  </span>
+		</h1>
 	  </div>
-	  <!--
-	  <div class="row">
-	    <div class="col-md-2">
-			<input type="button" id="btnSearch" class="btn btn-outline-danger" value="Qui ?" onclick="getPersonne('personne');" />
-		</div>
-		<div class="col-md-10">
-			<div id="personne" class="alert alert-danger font-weight-bold d-none" role="alert"></div>
-		</div>
-	  </div>
-	  <div class="row">
-	    <div class="col-md-2">
-			<input type="button" id="btnSearchLieu" class="btn btn-outline-danger" value="Où ?" onclick="getLieu();" />
-		</div>
-		<div class="col-md-10">
-			<div id="lieu" class="alert alert-danger font-weight-bold d-none" role="alert"></div>
-		</div>
-	  </div>
-	  <div class="row">
-	    <div class="col-md-2">
-			<input type="button" id="btnSearchObjet" class="btn btn-outline-danger" value="Objet" onclick="getObjet();" />
-		</div>
-		<div class="col-md-10">
-			<div id="objet" class="alert alert-danger font-weight-bold d-none" role="alert"></div>
-		</div>
-	  </div>
-	  <div class="row">
-	    <div class="col-md-2">
-			<input type="button" id="btnSearchAppartient" class="btn btn-outline-danger" value="De qui ?" onclick="getPersonne('appartient');" />
-		</div>
-		<div class="col-md-10">
-			<div id="appartient" class="alert alert-danger font-weight-bold d-none" role="alert"></div>
-		</div>
-	  </div>
-	  <div class="row">
-	    <div class="col-md-2">
-			<input type="button" id="btnSearchQuand" class="btn btn-outline-danger" value="Quand ?" onclick="getQuand();" />
-		</div>
-		<div class="col-md-10">
-			<div id="quand" class="alert alert-danger font-weight-bold d-none" role="alert"></div>
-		</div>
-	  </div> -->
     </div>
     <!-- JQuery -->
     <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
@@ -83,6 +43,8 @@
     <script type="text/javascript" src="js/mdb.min.js"></script>
 	
 	<script type="text/javascript" src="js/suisseducul.js"></script>
+	
+	<script type="text/javascript" src="js/anime.js"></script>
   </body>
 
 </html>
