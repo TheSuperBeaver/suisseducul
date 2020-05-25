@@ -23,7 +23,7 @@ body{
 	color:#fff;
 	width:100%;
 	overflow:hidden;
-	max-width:560px;
+	max-width:500px;
 	min-height:390px;
 	margin:50px auto 0;
 	background:#8a0b0b;
@@ -150,7 +150,7 @@ body{
 
 .author-quote-wrap .quote-content{
 	padding:15px;
-	width:calc(560px - 140px);
+	width:calc(500px - 140px);
 }
 .quote-content .quote-like{
 	font-size:12px;
@@ -190,7 +190,7 @@ body{
 	text-transform: uppercase;
 }
 .quote-content .quote-text{
-	font-size:26px;
+	font-size:24px;
 	font-weight:900;
 	line-height:55px;
 }
