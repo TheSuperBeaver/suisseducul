@@ -58,7 +58,7 @@ function randomLieu() {
 	lieu = lieux[Math.floor(Math.random() * lieux.length)];
 }
 function replacePhrase() {
-	phrase = quand + " " + lieu + " " + personne1 + " et " + personne2 + " " + verbe + " " + objet + " de " + personne3;
+	phrase = quand + " " + lieu + ", " + personne1 + " et " + personne2 + " " + verbe + " " + objet + " de " + personne3;
 	var textWrapper = document.querySelector('.ml11 .letters');
 	textWrapper.innerHTML = phrase;
 	
