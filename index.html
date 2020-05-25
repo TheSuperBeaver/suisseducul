@@ -20,94 +20,23 @@
 
   <body>  
 	
-	<div class="container-fluid">
-		<div id="carouselContent" class="carousel slide" data-interval="false" data-ride="carousel">
-			<div class="carousel-inner" role="listbox">
-				<div class="carousel-item active text-center p-4">
-					<div class="row justify-content-md-center">
-						<div class="col-md-auto"><header>La dernière heure du cul</div>
-					</div>
-					<div class="row justify-content-md-center">
-						<div class="img-wrap ratio-4-3 col-md-auto">
-							<div class="img-content">
-								<img class="circular--square" src="img/img1.jpg" />
-							</div>
-						</div>
-					</div>
-					<div class="row justify-content-md-center">
-						<div class="col-md-auto phrase" id="phrase1">Chargement..</div>
-					</div>
-				</div>
-				<div class="carousel-item text-center p-4">
-					<div class="row justify-content-md-center">
-						<div class="col-md-auto"><header>La dernière heure du cul</div>
-					</div>
-					<div class="row justify-content-md-center">
-						<div class="img-wrap ratio-4-3 col-md-auto">
-							<div class="img-content">
-								<img class="circular--square" src="img/img2.jpg" />
-							</div>
-						</div>
-					</div>
-					<div class="row justify-content-md-center">
-						<div class="col-md-auto phrase" id="phrase2">Chargement..</div>
-					</div>
-				</div>
-				<div class="carousel-item text-center p-4">
-					<div class="row justify-content-md-center">
-						<div class="col-md-auto"><header>La dernière heure du cul</div>
-					</div>
-					<div class="row justify-content-md-center">
-						<div class="img-wrap ratio-4-3 col-md-auto">
-							<div class="img-content">
-								<img class="circular--square" src="img/img3.jpg" />
-							</div>
-						</div>
-					</div>
-					<div class="row justify-content-md-center">
-						<div class="col-md-auto phrase" id="phrase3">Chargement..</div>
-					</div>
-				</div>
-				<div class="carousel-item text-center p-4">
-					<div class="row justify-content-md-center">
-						<div class="col-md-auto"><header>La dernière heure du cul</div>
-					</div>
-					<div class="row justify-content-md-center">
-						<div class="img-wrap ratio-4-3 col-md-auto">
-							<div class="img-content">
-								<img class="circular--square" src="img/img4.jpg" />
-							</div>
-						</div>
-					</div>
-					<div class="row justify-content-md-center">
-						<div class="col-md-auto phrase" id="phrase4">Chargement..</div>
-					</div>
-				</div>
-				<div class="carousel-item text-center p-4">
-					<div class="row justify-content-md-center">
-						<div class="col-md-auto"><header>La dernière heure du cul</div>
-					</div>
-					<div class="row justify-content-md-center">
-						<div class="img-wrap ratio-4-3 col-md-auto">
-							<div class="img-content">
-								<img class="circular--square" src="img/img5.jpg" />
-							</div>
-						</div>
-					</div>
-					<div class="row justify-content-md-center">
-						<div class="col-md-auto phrase" id="phrase5">Chargement..</div>
-					</div>
-					<div class="btn btn-outline-danger" onclick="location.reload()">Générer d'autres phrases</div>
+	<div class="container-fluid text-center p-4 paper">
+		<div class="row justify-content-md-center">
+			<div class="col-md-auto"><header>La dernière heure du cul</div>
+		</div>
+		<div class="row justify-content-md-center">
+			<div class="img-wrap ratio-4-3 col-md-auto">
+				<div class="img-content">
+					<img id="image" class="circular--square" src="img/img1.jpg" />
 				</div>
 			</div>
-			<a class="carousel-control-prev" href="#carouselContent" role="button" data-slide="prev">
-				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-				<span class="sr-only">Précédent</span>
-			</a>
-			<a class="carousel-control-next" href="#carouselContent" role="button" data-slide="next">
-				<span class="carousel-control-next-icon" aria-hidden="true"></span>
-				<span class="sr-only">Suivant</span>
-			</a>
+		</div>
+		<div class="row justify-content-md-center">
+			<div class="col-md-auto phrase" id="phrase">Chargement..</div>
+		</div>
+		<div class="row justify-content-md-center">
+			<div class="btn btn-light" onclick="regenerate();">Générer</div>
+			<div class="btn btn-info" onclick="autrePersonnes();">Même, avec d'autres personnes</div>
 		</div>
 	</div>
 

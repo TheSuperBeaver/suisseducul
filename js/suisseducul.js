@@ -50,32 +50,22 @@ function hasElements(list) {
 
 function finishedLoadingList() {
 	if(hasElements(personnes) && hasElements(objets) && hasElements(lieux) && hasElements(quands) && hasElements(verbesSingulier) && hasElements(verbesPluriel)) {
-		newPhrases();
+		$("#phrase").html(getPhrase(true));
 	}		
 }
 
-function newPhrases() {
-	$("#phrase1").html(getPhrase(true));
-	$("#phrase2").html(getPhrase(true));
-	$("#phrase3").html(getPhrase(true));
-	$("#phrase4").html(getPhrase(true));
-	$("#phrase5").html(getPhrase(true));
-}
-
-function generePhrase() {
-	
-	var phrase = getPhrase(true);
-	
-	var textWrapper = document.querySelector('.phrase');
-	textWrapper.innerHTML = phrase;
+function regenerate() {
+	$("#phrase").html(getPhrase(true));
+	var selected = _.sampleSize(["1", "2", "3", "4", "5"], 1);
+    var image = $("#image");
+    image.fadeOut('fast', function () {
+        image.attr('src', 'img/img'+selected+'.jpg');
+        image.fadeIn('fast');
+    });
 }
 
 function autrePersonnes() {
-	
-	var phrase = getPhrase(false);
-	
-	var textWrapper = document.querySelector('.phrase');
-	textWrapper.innerHTML = phrase;
+	$("#phrase").html(getPhrase(false));
 }
 
 function getPhrase(changePhrase) {
@@ -84,22 +74,16 @@ function getPhrase(changePhrase) {
 		quand = _.sampleSize(quands, 1);
 		lieu = _.sampleSize(lieux, 1);
 		objet = _.sampleSize(objets, 1);
+		verbePluriel = _.sampleSize(verbesPluriel, 1)
+		verbeSingulier = _.sampleSize(verbesSingulier, 1)
 	}
 	
 	if(Math.random() >= 0.5) { // 50% 2 personnes, 50% 3 personnes
-		personnesChoisies = _.sampleSize(personnes, 3)
-		if(changePhrase) {
-			verbe = _.sampleSize(verbesPluriel, 1)
-		}
-		
-		return quand + " " + lieu + ", " + personnesChoisies[0] + " et " + personnesChoisies[1] + " " + verbe + " " + objet + getDe(personnesChoisies[2]) + personnesChoisies[2];
+		personnesChoisies = _.sampleSize(personnes, 3)		
+		return quand + " " + lieu + ", " + personnesChoisies[0] + " et " + personnesChoisies[1] + " " + verbePluriel + " " + objet + getDe(personnesChoisies[2]) + personnesChoisies[2];
 	} else {
 		personnesChoisies = _.sampleSize(personnes, 2)
-		if(changePhrase) {
-			verbe = _.sampleSize(verbesSingulier, 1)
-		}
-
-		return quand + " " + lieu + ", " + personnesChoisies[0] + " " + verbe + " " + objet + getDe(personnesChoisies[1]) + personnesChoisies[1];
+		return quand + " " + lieu + ", " + personnesChoisies[0] + " " + verbeSingulier + " " + objet + getDe(personnesChoisies[1]) + personnesChoisies[1];
 	}
 }
 
