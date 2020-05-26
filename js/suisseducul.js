@@ -56,12 +56,18 @@ function finishedLoadingList() {
 
 function regenerate() {
 	$("#phrase").html(getPhrase(true));
-	var selected = _.sampleSize(["1", "2", "3", "4", "5"], 1);
+
     var image = $("#image");
     image.fadeOut('fast', function () {
-        image.attr('src', 'img/img'+selected+'.jpg');
+        image.attr('src', 'img/img'+getRandomInt(1,35)+'.jpg');
         image.fadeIn('fast');
     });
+}
+
+function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
 function autrePersonnes() {
