@@ -57,7 +57,11 @@ function finishedLoadingList() {
 function regenerate() {
 	$("#phrase").html(getPhrase(true));
 
-    var image = $("#image");
+    randomImage();
+}
+
+function randomImage() {
+	var image = $("#image");
     image.fadeOut('fast', function () {
         image.attr('src', 'img/img'+getRandomInt(1,69)+'.jpg');
         image.fadeIn('fast');
