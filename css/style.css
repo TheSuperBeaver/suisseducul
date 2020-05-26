@@ -14,8 +14,8 @@ body {
 }
 
 .paper {
-  background: rgb(74,74,74);
-  background: linear-gradient(0deg, rgba(74,74,74,1) 0%, rgba(240,239,239,1) 24%, rgba(255,255,255,1) 100%);
+  background: rgb(242,238,203);
+  background: linear-gradient(0deg, rgba(74,74,74,1) 0%, rgba(240,239,239,1) 24%, rgba(242,238,203,1) 100%);
   padding: 30px;
   position: relative;
 }
