@@ -10,7 +10,7 @@ body {
 .container-fluid {
   margin-right: auto;
   margin-left: auto;
-  max-width: 500px; /* or 950px */
+  max-width: 450px; /* or 950px */
 }
 
 .paper {
@@ -78,36 +78,43 @@ body {
 header{
     font-family: 'Playfair Display', serif;
     font-weight: 900;
-    font-size: 60px;
+    font-size: 50px;
     text-transform: uppercase;
     display: inline-block;
     line-height: 72px;
     margin-bottom: 20px;
+	text-align: justify;
 }
 
 .phrase{
-    text-align: center;
+    text-align: justify;
     line-height: normal;
     font-family: 'Georgia', serif;
 	font-weight: bold;
     display: block;
     margin: 0 auto;
-	font-size: 30px;
+	font-size: 20px;
     line-height: 36px;
     display: inline-block;
     padding: 0 1% 0 1%;
     vertical-align: top;
-	margin-top: 50px;
-    margin-bottom: 50px;
+	margin-top: 25px;
+    margin-bottom: 25px;
     transition: all .7s;
 	text-transform: uppercase;
+
+}
+
+.phrase b {
+	font-weight: bolder;
+	font-size: 22px;
+	color: #163d7a;
 }
 
 .img-wrap{
     position: relative;
 	border-bottom: 2px solid #000000;
     border-top: 2px solid #000000;
-    padding: 12px 0 12px 0;
     .img-content{
         position: absolute;
         top: 0;

@@ -86,10 +86,10 @@ function getPhrase(changePhrase) {
 	
 	if(Math.random() >= 0.5) { // 50% 2 personnes, 50% 3 personnes
 		personnesChoisies = _.sampleSize(personnes, 3)		
-		return quand + " " + lieu + ", " + personnesChoisies[0] + " et " + personnesChoisies[1] + " " + verbePluriel + " " + objet + getDe(personnesChoisies[2]) + personnesChoisies[2];
+		return quand + " " + lieu + ", <b>" + personnesChoisies[0] + "</b> et <b>" + personnesChoisies[1] + "</b> " + verbePluriel + " " + objet + getDe(personnesChoisies[2]) + "<b>" + personnesChoisies[2] + "</b>";
 	} else {
 		personnesChoisies = _.sampleSize(personnes, 2)
-		return quand + " " + lieu + ", " + personnesChoisies[0] + " " + verbeSingulier + " " + objet + getDe(personnesChoisies[1]) + personnesChoisies[1];
+		return quand + " " + lieu + ", <b>" + personnesChoisies[0] + "</b> " + verbeSingulier + " " + objet + getDe(personnesChoisies[1]) + "<b>" + personnesChoisies[1] + "</b>";
 	}
 }
 
