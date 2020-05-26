@@ -50,7 +50,7 @@ function hasElements(list) {
 
 function finishedLoadingList() {
 	if(hasElements(personnes) && hasElements(objets) && hasElements(lieux) && hasElements(quands) && hasElements(verbesSingulier) && hasElements(verbesPluriel)) {
-		$("#phrase").html(getPhrase(true));
+		regenerate();
 	}		
 }
 
@@ -59,7 +59,7 @@ function regenerate() {
 
     var image = $("#image");
     image.fadeOut('fast', function () {
-        image.attr('src', 'img/img'+getRandomInt(1,35)+'.jpg');
+        image.attr('src', 'img/img'+getRandomInt(1,59)+'.jpg');
         image.fadeIn('fast');
     });
 }
