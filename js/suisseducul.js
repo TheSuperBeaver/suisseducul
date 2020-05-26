@@ -59,7 +59,7 @@ function regenerate() {
 
     var image = $("#image");
     image.fadeOut('fast', function () {
-        image.attr('src', 'img/img'+getRandomInt(1,59)+'.jpg');
+        image.attr('src', 'img/img'+getRandomInt(1,61)+'.jpg');
         image.fadeIn('fast');
     });
 }
